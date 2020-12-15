@@ -2,6 +2,7 @@ import News from "./News"
 import PropTypes from "prop-types"
 
 const NewsList = ({news}) => (
+    news ? (
         <div className="row">
             {news.map(noticia => (
                 <News 
@@ -10,6 +11,8 @@ const NewsList = ({news}) => (
                 />
             ))}
         </div>
+    ) : null
+        
 )
 
 NewsList.propTypes = {
